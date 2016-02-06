@@ -1,0 +1,168 @@
+init_config:
+
+instances:
+    -   host: localhost
+        port: 1088
+        conf:
+            # Young Gen Collectors (Minor Collections)
+            - include:
+                domain: com.wizzardo.jmx
+                type: GcStats
+                name: Copy
+                attribute:
+                    CollectionCountDiff:
+                        alias: jmx.gc.minor_collection_count_diff
+                    CollectionTimeDiff:
+                        alias: jmx.gc.minor_collection_time_diff
+            - include:
+                domain: com.wizzardo.jmx
+                type: GcStats
+                name: PS Scavenge
+                attribute:
+                    CollectionCountDiff:
+                        alias: jmx.gc.minor_collection_count_diff
+                    CollectionTimeDiff:
+                        alias: jmx.gc.minor_collection_time_diff
+            - include:
+                domain: com.wizzardo.jmx
+                type: GcStats
+                name: ParNew
+                attribute:
+                    CollectionCountDiff:
+                        alias: jmx.gc.minor_collection_count_diff
+                    CollectionTimeDiff:
+                        alias: jmx.gc.minor_collection_time_diff
+            - include:
+                domain: com.wizzardo.jmx
+                type: GcStats
+                name: G1 Young Generation
+                attribute:
+                    CollectionCountDiff:
+                        alias: jmx.gc.minor_collection_count_diff
+                    CollectionTimeDiff:
+                        alias: jmx.gc.minor_collection_time_diff
+            - include:
+                domain: java.lang
+                type: GarbageCollector
+                name: Copy
+                attribute:
+                    CollectionCount:
+                        metric_type: gauge
+                        alias: jmx.gc.minor_collection_count
+                    CollectionTime:
+                        metric_type: gauge
+                        alias: jmx.gc.minor_collection_time
+            - include:
+                domain: java.lang
+                type: GarbageCollector
+                name: PS Scavenge
+                attribute:
+                    CollectionCount:
+                        metric_type: gauge
+                        alias: jmx.gc.minor_collection_count
+                    CollectionTime:
+                        metric_type: gauge
+                        alias: jmx.gc.minor_collection_time
+            - include:
+                domain: java.lang
+                type: GarbageCollector
+                name: ParNew
+                attribute:
+                    CollectionCount:
+                        metric_type: gauge
+                        alias: jmx.gc.minor_collection_count
+                    CollectionTime:
+                        metric_type: gauge
+                        alias: jmx.gc.minor_collection_time
+            - include:
+                domain: java.lang
+                type: GarbageCollector
+                name: G1 Young Generation
+                attribute:
+                    CollectionCount:
+                        metric_type: gauge
+                        alias: jmx.gc.minor_collection_count
+                    CollectionTime:
+                        metric_type: gauge
+                        alias: jmx.gc.minor_collection_time
+            # Old Gen Collectors (Major collections)
+            - include:
+                domain: com.wizzardo.jmx
+                type: GcStats
+                name: MarkSweepCompact
+                attribute:
+                    CollectionCountDiff:
+                        alias: jmx.gc.minor_collection_count_diff
+                    CollectionTimeDiff:
+                        alias: jmx.gc.minor_collection_time_diff
+            - include:
+                domain: com.wizzardo.jmx
+                type: GcStats
+                name: PS MarkSweep
+                attribute:
+                    CollectionCountDiff:
+                        alias: jmx.gc.minor_collection_count_diff
+                    CollectionTimeDiff:
+                        alias: jmx.gc.minor_collection_time_diff
+            - include:
+                domain: com.wizzardo.jmx
+                type: GcStats
+                name: ConcurrentMarkSweep
+                attribute:
+                    CollectionCountDiff:
+                        alias: jmx.gc.minor_collection_count_diff
+                    CollectionTimeDiff:
+                        alias: jmx.gc.minor_collection_time_diff
+            - include:
+                domain: com.wizzardo.jmx
+                type: GcStats
+                name: G1 Mixed Generation
+                attribute:
+                    CollectionCountDiff:
+                        alias: jmx.gc.minor_collection_count_diff
+                    CollectionTimeDiff:
+                        alias: jmx.gc.minor_collection_time_diff
+            - include:
+               domain: java.lang
+               type: GarbageCollector
+               name: MarkSweepCompact
+               attribute:
+                    CollectionCount:
+                        metric_type: gauge
+                        alias: jmx.gc.major_collection_count
+                    CollectionTime:
+                        metric_type: gauge
+                        alias: jmx.gc.major_collection_time
+            - include:
+                domain: java.lang
+                type: GarbageCollector
+                name: PS MarkSweep
+                attribute:
+                    CollectionCount:
+                        metric_type: gauge
+                        alias: jmx.gc.major_collection_count
+                    CollectionTime:
+                        metric_type: gauge
+                        alias: jmx.gc.major_collection_time
+            - include:
+                domain: java.lang
+                type: GarbageCollector
+                name: ConcurrentMarkSweep
+                attribute:
+                    CollectionCount:
+                        metric_type: gauge
+                        alias: jmx.gc.major_collection_count
+                    CollectionTime:
+                        metric_type: gauge
+                        alias: jmx.gc.major_collection_time
+            - include:
+                domain: java.lang
+                type: GarbageCollector
+                name: G1 Mixed Generation
+                attribute:
+                    CollectionCount:
+                        metric_type: gauge
+                        alias: jmx.gc.major_collection_count
+                    CollectionTime:
+                        metric_type: gauge
+                        alias: jmx.gc.major_collection_time
