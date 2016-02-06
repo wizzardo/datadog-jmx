@@ -92,36 +92,36 @@ instances:
                 name: MarkSweepCompact
                 attribute:
                     CollectionCountDiff:
-                        alias: jmx.gc.minor_collection_count_diff
+                        alias: jmx.gc.major_collection_count_diff
                     CollectionTimeDiff:
-                        alias: jmx.gc.minor_collection_time_diff
+                        alias: jmx.gc.major_collection_time_diff
             - include:
                 domain: com.wizzardo.jmx
                 type: GcStats
                 name: PS MarkSweep
                 attribute:
                     CollectionCountDiff:
-                        alias: jmx.gc.minor_collection_count_diff
+                        alias: jmx.gc.major_collection_count_diff
                     CollectionTimeDiff:
-                        alias: jmx.gc.minor_collection_time_diff
+                        alias: jmx.gc.major_collection_time_diff
             - include:
                 domain: com.wizzardo.jmx
                 type: GcStats
                 name: ConcurrentMarkSweep
                 attribute:
                     CollectionCountDiff:
-                        alias: jmx.gc.minor_collection_count_diff
+                        alias: jmx.gc.major_collection_count_diff
                     CollectionTimeDiff:
-                        alias: jmx.gc.minor_collection_time_diff
+                        alias: jmx.gc.major_collection_time_diff
             - include:
                 domain: com.wizzardo.jmx
                 type: GcStats
                 name: G1 Mixed Generation
                 attribute:
                     CollectionCountDiff:
-                        alias: jmx.gc.minor_collection_count_diff
+                        alias: jmx.gc.major_collection_count_diff
                     CollectionTimeDiff:
-                        alias: jmx.gc.minor_collection_time_diff
+                        alias: jmx.gc.major_collection_time_diff
             - include:
                domain: java.lang
                type: GarbageCollector
