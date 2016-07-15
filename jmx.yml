@@ -166,3 +166,107 @@ instances:
                     CollectionTime:
                         metric_type: gauge
                         alias: jmx.gc.major_collection_time
+            # MemoryPool
+            - include:
+                domain: java.lang
+                type: MemoryPool
+                name: Metaspace
+                attribute:
+                    Usage.committed:
+                        metric_type: gauge
+                        alias: jvm.mp.committed
+                    Usage.init:
+                        metric_type: gauge
+                        alias: jvm.mp.init
+                    Usage.max:
+                        metric_type: gauge
+                        alias: jvm.mp.max
+                    Usage.used:
+                        metric_type: gauge
+                        alias: jvm.mp.used
+            - include:
+                domain: java.lang
+                type: MemoryPool
+                name: G1 Survivor Space
+                attribute:
+                    Usage.committed:
+                        metric_type: gauge
+                        alias: jvm.mp.committed
+                    Usage.init:
+                        metric_type: gauge
+                        alias: jvm.mp.init
+                    Usage.max:
+                        metric_type: gauge
+                        alias: jvm.mp.max
+                    Usage.used:
+                        metric_type: gauge
+                        alias: jvm.mp.used
+            - include:
+                domain: java.lang
+                type: MemoryPool
+                name: G1 Old Gen
+                attribute:
+                    Usage.committed:
+                        metric_type: gauge
+                        alias: jvm.mp.committed
+                    Usage.init:
+                        metric_type: gauge
+                        alias: jvm.mp.init
+                    Usage.max:
+                        metric_type: gauge
+                        alias: jvm.mp.max
+                    Usage.used:
+                        metric_type: gauge
+                        alias: jvm.mp.used
+            - include:
+                domain: java.lang
+                type: MemoryPool
+                name: G1 Eden Space
+                attribute:
+                    Usage.committed:
+                        metric_type: gauge
+                        alias: jvm.mp.committed
+                    Usage.init:
+                        metric_type: gauge
+                        alias: jvm.mp.init
+                    Usage.max:
+                        metric_type: gauge
+                        alias: jvm.mp.max
+                    Usage.used:
+                        metric_type: gauge
+                        alias: jvm.mp.used
+            - include:
+                domain: java.lang
+                type: MemoryPool
+                name: Compressed Class Space
+                attribute:
+                    Usage.committed:
+                        metric_type: gauge
+                        alias: jvm.mp.committed
+                    Usage.init:
+                        metric_type: gauge
+                        alias: jvm.mp.init
+                    Usage.max:
+                        metric_type: gauge
+                        alias: jvm.mp.max
+                    Usage.used:
+                        metric_type: gauge
+                        alias: jvm.mp.used
+            - include:
+                domain: java.lang
+                type: MemoryPool
+                name: Code Cache
+                attribute:
+                    Usage.committed:
+                        metric_type: gauge
+                        alias: jvm.mp.committed
+                    Usage.init:
+                        metric_type: gauge
+                        alias: jvm.mp.init
+                    Usage.max:
+                        metric_type: gauge
+                        alias: jvm.mp.max
+                    Usage.used:
+                        metric_type: gauge
+                        alias: jvm.mp.used
+
