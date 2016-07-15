@@ -269,4 +269,26 @@ instances:
                     Usage.used:
                         metric_type: gauge
                         alias: jvm.mp.used
+            # ClassLoading
+            - include:
+                domain: java.lang
+                type: ClassLoading
+                attribute:
+                    LoadedClassCount:
+                        metric_type: gauge
+                        alias: jvm.classes.loaded
+                    TotalLoadedClassCount:
+                        metric_type: gauge
+                        alias: jvm.classes.total
+                    UnloadedClassCount:
+                        metric_type: gauge
+                        alias: jvm.classes.unloaded
+            # Compilation
+            - include:
+                domain: java.lang
+                type: Compilation
+                attribute:
+                    TotalCompilationTime:
+                        metric_type: gauge
+                        alias: jvm.compilation.time
 
